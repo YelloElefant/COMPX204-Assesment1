@@ -13,5 +13,5 @@ jobs:
     - name: compile code
       run: javac *.java
     - name: run tests
-      run: java resolve google.com hshsd | grep -q "Unable to resolve" && echo "Test Passed" && exit 0 || echo "Test Failed" && exit 1
+      run: java resolve google.com yelloelefant.com | grep -q "Unable to resolve" && echo "Test Passed" && exit 0 || echo "Test Failed" && exit 1
         
