@@ -12,6 +12,7 @@ jobs:
         java-version: 11
     - name: compile code
       run: javac *.java
-    - name: run tests
+    - name: run tests on resolve
       run: java resolve google.com yelloelefant.com | grep -q "Unable to resolve" && echo "Test Failed" && exit 1 || echo "Test Passed" && exit 0
+      run: java reverse 1.1.1.1 8.8.8.8 | grep -q "Unable to resolve" && echo "Test Failed" && exit 1 || echo "Test Passed" && exit 0
         
