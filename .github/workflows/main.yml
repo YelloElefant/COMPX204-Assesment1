@@ -4,8 +4,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - env:
-        SCIRPT_OUTPUT: ${{steps.compile.outputs.SCIRPT_OUTPUT}}
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Set up JDK 11
@@ -15,7 +13,5 @@ jobs:
     - name: compile code
       run: javac *.java
     - name: run tests
-      run: java resolve google.com hshsd 
-    - name: Check the output
-      run: echo $SCIRPT_OUTPUT | grep -q "Unable to resolve" && echo "Test Passed" && exit 0 || echo "Test Failed" && exit 1
+      run: java resolve google.com hshsd | grep -q "Unable to resolve" && echo "Test Passed" && exit 0 || echo "Test Failed" && exit 1
         
