@@ -9,7 +9,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
-    - name: 
+    - name: compile code
       run: javac *.java
     - name: run tests
-      run: java resolve google.com yelloelefant.com
+      run: java resolve google.com hshsd | if grep -q "Unable to resolve"; then echo "Test failed"; exit 1; else echo "Test passed"; fi
