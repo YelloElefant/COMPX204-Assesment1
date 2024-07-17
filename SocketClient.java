@@ -14,6 +14,11 @@ public class SocketClient {
          Socket socket = new Socket(ip, port);
          System.out.println("Connected to " + ip + " on port " + port);
          socket.getOutputStream().write(message.getBytes());
+
+         byte[] response = new byte[4096];
+         socket.getInputStream().read(response);
+         System.out.println("Response: " + new String(response).trim());
+
          socket.close();
       } catch (IOException e) {
          System.err.println("Unable to connect to " + ip + " on port " + port);
