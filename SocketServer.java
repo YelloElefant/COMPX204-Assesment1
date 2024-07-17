@@ -5,7 +5,7 @@ import java.net.Socket;
 public class SocketServer {
    public static void main(String[] args) {
       if (args.length == 0) {
-         System.err.println("Usage: java SocketServer port");
+         System.err.println("Usage: java SocketServer <port>");
          return;
       }
       int port = Integer.parseInt(args[0]);

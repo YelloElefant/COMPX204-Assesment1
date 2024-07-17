@@ -4,7 +4,7 @@ import java.net.Socket;
 public class SocketClient {
    public static void main(String[] args) {
       if (args.length == 0) {
-         System.err.println("Usage: java SocketClient ipaddress port");
+         System.err.println("Usage: java SocketClient <ipaddress> <port>");
          return;
       }
       String ip = args[0];

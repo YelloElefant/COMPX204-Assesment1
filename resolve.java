@@ -4,7 +4,7 @@ import java.util.*;
 public class resolve {
    public static void main(String[] args) {
       if (args.length == 0) {
-         System.err.println("Usage: java resolve hostname");
+         System.err.println("Usage: java resolve <hostname>");
          return;
       }
       (Arrays.asList(args)).forEach((arg) -> {
