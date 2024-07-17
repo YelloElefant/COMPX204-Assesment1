@@ -17,6 +17,7 @@ public class SocketServer {
             System.out.println("Connection from " + client.getInetAddress());
             client.close();
          }
+         // server.close();
       } catch (IOException e) {
          System.err.println("Unable to start server on port " + port);
       }
