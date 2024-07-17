@@ -14,14 +14,9 @@ public class reverse {
    }
 
    public static void resolveIpAdress(String ipAdressString) {
-      String[] ipAdressParts = ipAdressString.split("\\.");
-      byte[] ipAdress = new byte[4];
-      for (int i = 0; i < 4; i++) {
-         ipAdress[i] = (byte) Integer.parseInt(ipAdressParts[i]);
-      }
       try {
-         InetAddress address = InetAddress.getByAddress(ipAdress);
-         System.out.println(ipAdressString + ": " + address.getCanonicalHostName());
+         InetAddress address = InetAddress.getByName(ipAdressString);
+         System.out.println(ipAdressString + ": " + address.getHostName());
       } catch (UnknownHostException e) {
          System.err.println("Unable to resolve " + ipAdressString);
       }
