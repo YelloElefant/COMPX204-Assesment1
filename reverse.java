@@ -21,7 +21,7 @@ public class reverse {
       }
       try {
          InetAddress address = InetAddress.getByAddress(ipAdress);
-         System.out.println(ipAdressString + ": " + address.getHostName());
+         System.out.println(ipAdressString + ": " + address.getCanonicalHostName());
       } catch (UnknownHostException e) {
          System.err.println("Unable to resolve " + ipAdressString);
       }
