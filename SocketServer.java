@@ -15,6 +15,14 @@ public class SocketServer {
          while (true) {
             Socket client = server.accept();
             System.out.println("Connection from " + client.getInetAddress());
+
+            byte[] request = new byte[4096];
+            client.getInputStream().read(request);
+            System.out.println("Request: " + new String(request).trim());
+
+            String response = new StringBuilder(new String(request).trim()).reverse().toString();
+            client.getOutputStream().write(response.getBytes());
+
             client.close();
          }
          // server.close();
