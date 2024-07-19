@@ -18,7 +18,7 @@ public class reverse {
          InetAddress address = InetAddress.getByName(ipAdressString);
          System.out.println(ipAdressString + ": " + address.getHostName());
       } catch (UnknownHostException e) {
-         System.err.println("Unable to resolve " + ipAdressString);
+         System.err.println(ipAdressString + ": no name");
       }
    }
 }

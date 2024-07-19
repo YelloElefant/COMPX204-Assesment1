@@ -18,7 +18,7 @@ public class resolve {
          InetAddress address = InetAddress.getByName(hostName);
          System.out.println(hostName + ": " + address.getHostAddress());
       } catch (UnknownHostException e) {
-         System.err.println("Unable to resolve " + hostName);
+         System.err.println(hostName + ": unknown host");
       }
    }
 }
