@@ -11,16 +11,15 @@ public class SocketServer {
       int port = Integer.parseInt(args[0]);
       try {
          ServerSocket server = new ServerSocket(port);
-         System.out.println("Server started on port " + port);
+         System.out.println("Listening on port " + port);
          while (true) {
             Socket client = server.accept();
-            System.out.println("Connection from " + client.getInetAddress());
 
-            byte[] request = new byte[4096];
-            client.getInputStream().read(request);
-            System.out.println("Request: " + new String(request).trim());
+            String clientHostName = client.getInetAddress().getHostName();
 
-            String response = new StringBuilder(new String(request).trim()).reverse().toString();
+            String response = "Hello, " + clientHostName + ".\nYour Ip address is "
+                  + client.getInetAddress().getHostAddress() + ".\n";
+
             client.getOutputStream().write(response.getBytes());
 
             client.close();

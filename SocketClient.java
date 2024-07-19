@@ -4,20 +4,16 @@ import java.net.Socket;
 public class SocketClient {
    public static void main(String[] args) {
       if (args.length == 0) {
-         System.err.println("Usage: java SocketClient <ipaddress> <port> <message>");
+         System.err.println("Usage: java SocketClient <ipaddress> <port>");
          return;
       }
       String ip = args[0];
       int port = Integer.parseInt(args[1]);
-      String message = args[2];
       try {
          Socket socket = new Socket(ip, port);
-         System.out.println("Connected to " + ip + " on port " + port);
-         socket.getOutputStream().write(message.getBytes());
-
          byte[] response = new byte[4096];
          socket.getInputStream().read(response);
-         System.out.println("Response: " + new String(response).trim());
+         System.out.println(new String(response).trim());
 
          socket.close();
       } catch (IOException e) {
