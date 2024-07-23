@@ -3,13 +3,15 @@
 import java.net.*;
 import java.util.*;
 
-/*
- * The reverse program takes any amount of IP addresses as arguments and prints the
- * corresponding hostname. If the IP address cannot be resolved, the program prints "no name".
+/**
+ * The reverse program takes any amount of IP addresses as arguments and prints
+ * the
+ * corresponding hostname. If the IP address cannot be resolved, the program
+ * prints "no name".
  * The program uses the resolveIpAdress method to resolve the IP address.
  */
 public class reverse {
-   /*
+   /**
     * The main method takes any amount of IP addresses as arguments and calls the
     * resolveIpAdress method for each IP address.
     *
@@ -29,7 +31,7 @@ public class reverse {
 
    }
 
-   /*
+   /**
     * The resolveIpAdress method takes an IP address as an argument and prints the
     * corresponding hostname. If the IP address cannot be resolved, the method
     * prints "no name".

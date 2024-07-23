@@ -4,13 +4,16 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-/*
- * The SocketServer program listens on a specified port and sends a response to the client
- * with the client's hostname and IP address. The program uses the ServerSocket class to
- * listen on the specified port and the Socket class to send the response to the client.
+/**
+ * The SocketServer program listens on a specified port and sends a response to
+ * the client
+ * with the client's hostname and IP address. The program uses the ServerSocket
+ * class to
+ * listen on the specified port and the Socket class to send the response to the
+ * client.
  */
 public class SocketServer {
-   /*
+   /**
     * The main method listens on the specified port and sends a response to the
     * client with
     * the client's hostname and IP address.

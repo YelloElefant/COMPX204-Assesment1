@@ -3,13 +3,14 @@
 import java.io.IOException;
 import java.net.Socket;
 
-/*
- * The SocketClient program connects to a server on a specified IP address and port
+/**
+ * The SocketClient program connects to a server on a specified IP address and
+ * port
  * and prints the response from the server. The program uses the Socket class to
  * connect to the server and read the response.
  */
 public class SocketClient {
-   /*
+   /**
     * The main method connects to a server on a specified IP address and port
     * and prints the response from the server.
     *

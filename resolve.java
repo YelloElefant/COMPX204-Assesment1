@@ -3,12 +3,13 @@
 import java.net.*;
 import java.util.*;
 
-/*
- * The resolve program takes any amount of hostnames as arguments and prints the 
- * corresponding IP address. If the hostname cannot be resolved, the program prints "unknown host".
+/**
+ * The resolve program takes any amount of hostnames as arguments and prints the
+ * corresponding IP address. If the hostname cannot be resolved, the program
+ * prints "unknown host".
  */
 public class resolve {
-   /*
+   /**
     * The main method takes any amount of hostnames as arguments and calls the
     * resolveHostnames method for each hostname.
     *
@@ -28,7 +29,7 @@ public class resolve {
 
    }
 
-   /*
+   /**
     * The resolveHostnames method takes a hostname as an argument and prints the
     * corresponding IP address. If the hostname cannot be resolved, the method
     * prints "unknown host".
