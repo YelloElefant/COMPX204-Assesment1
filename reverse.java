@@ -1,10 +1,12 @@
+//Name : Alexander Trotter ID: 1644272
+
 import java.net.*;
 import java.util.*;
 
 public class reverse {
    public static void main(String[] args) {
       if (args.length == 0) {
-         System.err.println("Usage: java reverse <ipaddress>");
+         System.err.println("Usage: java reverse <ipaddress1> <ipaddress2> ...");
          return;
       }
       (Arrays.asList(args)).forEach((arg) -> {

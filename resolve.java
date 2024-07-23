@@ -1,10 +1,12 @@
+//Name : Alexander Trotter ID: 1644272
+
 import java.net.*;
 import java.util.*;
 
 public class resolve {
    public static void main(String[] args) {
       if (args.length == 0) {
-         System.err.println("Usage: java resolve <hostname>");
+         System.err.println("Usage: java resolve <hostname1> <hostname2> ...");
          return;
       }
       (Arrays.asList(args)).forEach((arg) -> {
@@ -13,6 +15,9 @@ public class resolve {
 
    }
 
+   /*
+    * 
+    */
    public static void resolveHostnames(String hostName) {
       try {
          InetAddress address = InetAddress.getByName(hostName);
