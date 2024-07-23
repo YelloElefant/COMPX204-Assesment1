@@ -3,12 +3,25 @@
 import java.net.*;
 import java.util.*;
 
+/*
+ * The resolve program takes any amount of hostnames as arguments and prints the 
+ * corresponding IP address. If the hostname cannot be resolved, the program prints "unknown host".
+ */
 public class resolve {
+   /*
+    * The main method takes any amount of hostnames as arguments and calls the
+    * resolveHostnames method for each hostname.
+    *
+    * @param args the hostnames to resolve
+    */
    public static void main(String[] args) {
+      // Check if there are no arguments and print usage message.
       if (args.length == 0) {
          System.err.println("Usage: java resolve <hostname1> <hostname2> ...");
          return;
       }
+      // For each argument, call the resolveHostnames method and pass it as the
+      // argument.
       (Arrays.asList(args)).forEach((arg) -> {
          resolveHostnames(arg);
       });
@@ -16,7 +29,11 @@ public class resolve {
    }
 
    /*
-    * 
+    * The resolveHostnames method takes a hostname as an argument and prints the
+    * corresponding IP address. If the hostname cannot be resolved, the method
+    * prints "unknown host".
+    *
+    * @param hostName the hostname to resolve
     */
    public static void resolveHostnames(String hostName) {
       try {
@@ -27,15 +44,3 @@ public class resolve {
       }
    }
 }
-
-// The resolve program takes a hostname as an argument and prints the
-// corresponding IP address. If the hostname cannot be resolved, the program
-// prints an error message.
-// The resolve program uses the InetAddress.getByName method to resolve the
-// hostname. This method returns an InetAddress object that represents the IP
-// address of the hostname. If the hostname cannot be resolved, the getByName
-// method throws an UnknownHostException .
-// The resolve program catches the UnknownHostException and prints an error
-// message.
-// Here is an example of running the resolve program:
-// $ java resolve www.google.com
